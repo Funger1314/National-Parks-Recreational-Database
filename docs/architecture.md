@@ -2,18 +2,18 @@
 
 ## Design Goals
 
-- preserve the recovered 2022 database faithfully
-- isolate modernization work from legacy artifacts
+- maintain source tables and modern analytical schema in parallel
+- isolate normalization work from imported source artifacts
 - allow analysis without requiring ArcGIS Pro
-- expose a clear path from recovered dump to normalized analytical outputs
+- expose a clear path from source data import to normalized analytical outputs
 
-## Practical Legacy Strategy
+## Practical Data Strategy
 
-The dump restores into `public.*` to preserve the original object names. The modernization layer adds `legacy.*` compatibility views rather than rewriting the recovered tables in place.
+The database import lands in `public.*` to preserve the original object names. The modernization layer adds `legacy.*` compatibility views rather than rewriting source tables in place.
 
 ```mermaid
 flowchart LR
-    Dump["Recovered PostgreSQL custom dump"] --> Public["public.* restored legacy tables"]
+    Dump["PostgreSQL source dump"] --> Public["public.* source tables"]
     Public --> Legacy["legacy.* compatibility views"]
     Legacy --> Core["core.* normalized tables"]
     Legacy --> Analytics["analytics.* corrected queries"]
@@ -23,7 +23,7 @@ flowchart LR
 
 ## Schemas
 
-- `public`: faithful restore target for the legacy dump
+- `public`: import target for source tables
 - `legacy`: read-only compatibility views over `public`
 - `metadata`: source datasets and alias tables
 - `core`: normalized relational and spatial tables
@@ -31,8 +31,7 @@ flowchart LR
 
 ## Separation of Responsibilities
 
-- Legacy tables are treated as immutable reference artifacts.
+- Source tables are treated as immutable reference data.
 - Modern constraints, foreign keys, and normalized names are applied only in `core`.
 - Query corrections and new analyses live in `analytics`.
 - Generated outputs live under `outputs/`.
-

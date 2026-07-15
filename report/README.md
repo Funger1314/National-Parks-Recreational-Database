@@ -1,9 +1,8 @@
-# Original Report Artifacts
+# Report Artifacts
 
-This directory documents the original December 2022 report and the figures recovered from it.
+This directory documents the December 2022 project report and the figures derived from it.
 
 - The PDF itself is not committed here by default.
 - Extracted figures stored under `figures/original_report/` are labeled as report-derived assets.
-- Reconstructed code snippets in the repository are based on report screenshots and are not claimed
-  to be the original notebook or source files.
-
+- Code snippets aligned with report screenshots are included for documentation and reproducibility,
+  but they are not presented as the original notebook or source files.

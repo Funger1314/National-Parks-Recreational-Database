@@ -1,4 +1,4 @@
-"""Command-line entry points for the reconstructed project."""
+"""Command-line entry points for the national parks data workflow."""
 
 from __future__ import annotations
 
@@ -10,7 +10,7 @@ from national_parks.logging_config import configure_logging
 
 
 def build_parser() -> argparse.ArgumentParser:
-    parser = argparse.ArgumentParser(description="National parks reconstruction utilities")
+    parser = argparse.ArgumentParser(description="National parks spatial database utilities")
     subparsers = parser.add_subparsers(dest="command", required=True)
 
     raw_parser = subparsers.add_parser("process-raw-visitation")

@@ -1,4 +1,4 @@
-"""Reconstructed academic spatial database project utilities."""
+"""National parks spatial database and analytics utilities."""
 
 __all__ = ["__version__"]
 
