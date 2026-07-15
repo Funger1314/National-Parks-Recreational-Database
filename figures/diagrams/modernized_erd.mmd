@@ -1,0 +1,15 @@
+erDiagram
+    SOURCE_DATASET ||--o{ PARK : supports
+    SOURCE_DATASET ||--o{ VISITATION : supports
+    SOURCE_DATASET ||--o{ FACILITY : supports
+    SOURCE_DATASET ||--o{ HISTORIC_SITE : supports
+    SOURCE_DATASET ||--o{ ROAD : supports
+    SOURCE_DATASET ||--o{ TRAIL : supports
+    SOURCE_DATASET ||--o{ PARKING_AREA : supports
+
+    PARK ||--o{ VISITATION : contains
+    PARK ||--o{ FACILITY : contains
+    PARK ||--o{ HISTORIC_SITE : contains
+    PARK ||--o{ ROAD : contains
+    PARK ||--o{ TRAIL : contains
+    PARK ||--o{ PARKING_AREA : contains

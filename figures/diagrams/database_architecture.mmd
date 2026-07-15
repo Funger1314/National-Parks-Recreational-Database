@@ -1,0 +1,8 @@
+flowchart LR
+    Legacy["Legacy Dump (2022)"] --> Public["Recovered public.* tables"]
+    Public --> LegacyViews["legacy.* compatibility views"]
+    LegacyViews --> Core["core schema"]
+    LegacyViews --> Analytics["analytics queries"]
+    Metadata["metadata schema"] --> Core
+    Core --> Outputs["outputs/query_results + outputs/figures"]
+

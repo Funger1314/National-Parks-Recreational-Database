@@ -1,0 +1,22 @@
+services:
+  db:
+    image: postgis/postgis:15-3.5
+    container_name: national-parks-postgis
+    env_file:
+      - .env
+    ports:
+      - "${POSTGRES_PORT:-5432}:5432"
+    volumes:
+      - postgres-data:/var/lib/postgresql/data
+      - ./database/legacy:/sources:ro
+      - ./sql:/sql:ro
+      - ./outputs:/workspace/outputs
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U ${POSTGRES_USER:-postgres} -d ${POSTGRES_DB:-national_parks}"]
+      interval: 10s
+      timeout: 5s
+      retries: 10
+
+volumes:
+  postgres-data:
+

@@ -1,0 +1,18 @@
+cff-version: 1.2.0
+title: National Parks Recreational Database Project
+message: Please cite this repository if you use the reconstructed code, audit notes, or figures.
+type: software
+authors:
+  - family-names: Group Project Contributors
+    given-names: Original 2022 Team
+  - family-names: Repository Owner
+    given-names: Replace With Your Name
+version: 0.1.0
+date-released: 2026-07-15
+license: MIT
+repository-code: https://github.com/replace-with-your-username/national-parks-spatial-database
+abstract: >
+  Reconstructed academic spatial database project based on a 2022
+  PostgreSQL/PostGIS backup and project report. The repository separates
+  recovered legacy artifacts from a modernized reproducible workflow.
+

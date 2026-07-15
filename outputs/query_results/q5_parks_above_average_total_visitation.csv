@@ -1,0 +1,5 @@
+np_name,total_visitation,average_total_visitation,is_above_average
+Assateague Island,90520360,303032272.0,False
+Grand Teton,160288198,303032272.0,False
+Great Smoky Mountain,824684974,303032272.0,True
+Rocky Mountain,136635556,303032272.0,False
