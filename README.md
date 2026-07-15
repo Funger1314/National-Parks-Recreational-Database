@@ -161,14 +161,6 @@ The modern analysis documents geometry type, SRID, validity, containment-versus-
 
 Performance-check SQL is prepared in [sql/analytics/05_performance_checks.sql](sql/analytics/05_performance_checks.sql). Actual `EXPLAIN ANALYZE` timings should be recorded only after running them in a live PostGIS environment.
 
-## Individual Contribution
-
-Replace this paragraph with an accurate description of the components personally completed by the repository owner. Do not infer or fabricate individual responsibilities.
-
-## Group-Project Attribution
-
-Project-level attribution should be preserved where source materials or prior collaboration contributed to the dataset, analysis design, or reporting structure. Individual component ownership should be stated explicitly rather than inferred.
-
 ## Limitations
 
 See [docs/limitations.md](docs/limitations.md) and [docs/reconstruction_notes.md](docs/reconstruction_notes.md).
