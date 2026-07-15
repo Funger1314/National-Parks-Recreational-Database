@@ -140,31 +140,3 @@ The five original SQL questions are preserved in `sql/legacy/02_original_report_
 3. The report describes cleaning the boundary dataset from 428 to 72 parks; the backup confirms 72 final records but also preserves the historical `gid` sequence at 428.
 4. The report describes the visitation table as a manually created import target; the backup confirms the legacy table shape but also exposes sequence-backed numeric columns.
 5. The report implies broad park coverage conceptually, while the operational spatial coverage is narrow for roads, trails, and parking.
-
-## Missing Original Assets
-
-Unavailable from the supplied materials:
-
-- the original raw visitation CSV files
-- the original shapefiles
-- the original ArcGIS Pro project
-- the original Excel workbook used for facility-code decoding
-- the original Jupyter notebook
-- the original pgAdmin restore history or import session logs
-
-## What Can Be Reproduced
-
-- legacy table exports from the recovered dump
-- the final merged visitation table
-- the five report-era analytical questions
-- selected spatial analyses and figures using recovered data
-- a modernized schema and migration workflow
-
-## What Cannot Be Reproduced Exactly
-
-- every original ArcGIS edit session
-- every original raw-to-final visitation transformation without the raw CSV files
-- the exact original notebook source
-- the exact original shapefile inventory and field history
-- the exact 2022 execution environment
-
